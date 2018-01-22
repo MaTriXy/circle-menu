@@ -10,14 +10,16 @@
 [![codebeat badge](https://codebeat.co/badges/6f67da5d-c416-4bac-9fb7-c2dc938feedc)](https://codebeat.co/projects/github-com-ramotion-circle-menu)
 [![Travis](https://img.shields.io/travis/Ramotion/circle-menu.svg)](https://travis-ci.org/Ramotion/circle-menu)
 
-## About
-This project is maintained by Ramotion, Inc.<br>
-We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br>
+# Check this library on other platforms:
+<a href="https://github.com/Ramotion/circle-menu-android"> 
+<img src="https://github.com/ramotion/navigation-stack/raw/master/Android_Java@2x.png" width="178" height="81"></a>
+<a href="https://github.com/Ramotion/react-native-circle-menu"> 
+<img src="https://github.com/ramotion/navigation-stack/raw/master/React Native@2x.png" width="178" height="81"></a>
 
 **Looking for developers for your project?**<br>
 This project is maintained by Ramotion, Inc. We specialize in the designing and coding of custom UI for Mobile Apps and Websites.
 
-<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=circle-menu-contact-us/#Get_in_Touch"> 
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=circle-menu-contact-us/#Get_in_Touch">
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
 
@@ -30,7 +32,7 @@ The [iPhone mockup](https://store.ramotion.com?utm_source=gthb&utm_medium=specia
 ## Requirements
 
 - iOS 9.0+
-- Xcode 7.3
+- Xcode 9.0.1
 
 ## Installation
 
@@ -39,8 +41,7 @@ Just add CircleMenuLib folder to your project.
 or use [CocoaPods](https://cocoapods.org) with Podfile:
 
 ```ruby
-pod 'CircleMenu', '~> 2.0.1' swift 3
-pod 'CircleMenu', '~> 1.0.7' swift 2
+pod 'CircleMenu'
 ```
 or [Carthage](https://github.com/Carthage/Carthage) users can simply add to their `Cartfile`:
 ```
@@ -106,12 +107,12 @@ Circle menu is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
 <br>
 
-# Get the Showroom App for iOS to give it a try
-Try this UI component and more like this in our iOS app. Contact us if interested.
+# Get the Showroom App for iOS and Android to give it a try
+Try this UI component and more like this in our mobile app. Contact us if interested.
 
-<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=circle-menu&mt=8" > 
+<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=circle-menu&mt=8" >
 <img src="https://github.com/ramotion/gliding-collection/raw/master/app_store@2x.png" width="117" height="34"></a>
-<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=circle-menu-contact-us/#Get_in_Touch"> 
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=circle-menu-contact-us/#Get_in_Touch">
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a>
 <br>
 <br>
