@@ -117,7 +117,7 @@ internal class CircleMenuButton: UIButton {
             UIView.animate(
                 withDuration: duration,
                 delay: delay,
-                options: UIViewAnimationOptions(),
+                options: UIView.AnimationOptions(),
                 animations: { () -> Void in
                     container.layer.transform = rotateTransform
                 },
@@ -132,7 +132,7 @@ internal class CircleMenuButton: UIButton {
 
 internal extension CircleMenuButton {
 
-    internal func showAnimation(distance: Float, duration: Double, delay: Double = 0) {
+    func showAnimation(distance: Float, duration: Double, delay: Double = 0) {
         guard let heightConstraint = (self.container?.constraints.filter { $0.identifier == "height" })?.first else {
             fatalError()
         }
@@ -148,7 +148,7 @@ internal extension CircleMenuButton {
             delay: delay,
             usingSpringWithDamping: 0.7,
             initialSpringVelocity: 0,
-            options: UIViewAnimationOptions.curveLinear,
+            options: UIView.AnimationOptions.curveLinear,
             animations: { () -> Void in
                 self.container?.superview?.layoutIfNeeded()
                 self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -157,7 +157,7 @@ internal extension CircleMenuButton {
         })
     }
 
-    internal func hideAnimation(distance: Float, duration: Double, delay: Double = 0) {
+    func hideAnimation(distance: Float, duration: Double, delay: Double = 0) {
         guard let heightConstraint = (self.container?.constraints.filter { $0.identifier == "height" })?.first else {
             return
         }
@@ -166,7 +166,7 @@ internal extension CircleMenuButton {
         UIView.animate(
             withDuration: duration,
             delay: delay,
-            options: UIViewAnimationOptions.curveEaseIn,
+            options: UIView.AnimationOptions.curveEaseIn,
             animations: { () -> Void in
                 self.container?.superview?.layoutIfNeeded()
                 self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
@@ -179,7 +179,7 @@ internal extension CircleMenuButton {
         })
     }
 
-    internal func changeDistance(_ distance: CGFloat, animated _: Bool, duration: Double = 0, delay: Double = 0) {
+    func changeDistance(_ distance: CGFloat, animated _: Bool, duration: Double = 0, delay: Double = 0) {
 
         guard let heightConstraint = (self.container?.constraints.filter { $0.identifier == "height" })?.first else {
             fatalError()
@@ -190,7 +190,7 @@ internal extension CircleMenuButton {
         UIView.animate(
             withDuration: duration,
             delay: delay,
-            options: UIViewAnimationOptions.curveEaseIn,
+            options: UIView.AnimationOptions.curveEaseIn,
             animations: { () -> Void in
                 self.container?.superview?.layoutIfNeeded()
             },
@@ -199,11 +199,11 @@ internal extension CircleMenuButton {
 
     // MARK: layer animation
 
-    internal func rotationAnimation(_ angle: Float, duration: Double) {
+    func rotationAnimation(_ angle: Float, duration: Double) {
         let rotation = customize(CABasicAnimation(keyPath: "transform.rotation")) {
             $0.duration = TimeInterval(duration)
             $0.toValue = (angle.degrees)
-            $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            $0.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         }
         container?.layer.add(rotation, forKey: "rotation")
     }
